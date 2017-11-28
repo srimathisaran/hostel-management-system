@@ -1,0 +1,30 @@
+HOSTEL MANAGEMENT  SYSTEM
+
+create table if not exists login(username varchar(15),password varchar(10));
+
+Create table if not exists account(name varchar(20),roll_no int(10),age int(30),sex varchar(10),date_of_birth date,blood_group varchar(10),aadhar_no int(20),address varchar(100),city varchar(20),state varchar(20),pincode int(10));
+
+create table if not exists student(Constraint student_student_id_pk primary key(student_id),student_name varchar(20),student_course varchar(10),student_dept varchar(30),student_year int(4),student_roomno int(5),state varchar(20),city varchar(10),phone_no int(10));
+
+create table if not exists block(block_no int(10),block_Name varchar(20),rooms integer(10));
+
+create table if not exists hostel(hostel_Id int(10),hostel_name varchar(20),hostel_capacity int(20),no_of_employees int(10),mess_Capacity int(1000));
+
+create table if not exists electricity(unit int(30),meter int(20),amount_per_meter int(10),total_amount int(10));
+
+create table if not exists laundry(foreign key(student_id) refrences student(student_id),no_of_dresses int(10),pickup_date DATE,delivery_date DATE);
+
+create table if not exists employee(employee_id int(10),employee_name varchar(10),designation varchar(10),salary float(10));
+
+create table if not exists visitors(visitor_name varchar(20),visitor_id int(10),entry_time date,exit_time date);
+
+create table outpass(foreign key(student_id) refrences student(student_id),stu_name varchar(20),room_no integer(10),place varchar(20),in_date DATETIME,out_date DATETIME
+
+Insert into hostel values(12345,"abc",100,50,500);
+
+select *from student where student_id=127;
+
+
+
+
+                                                                                                
